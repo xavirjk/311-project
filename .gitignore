@@ -1,5 +1,5 @@
 node_modules
-/Data
+/Data/images
 /tests/data
 package.json
 package-lock.json
