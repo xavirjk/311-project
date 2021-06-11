@@ -1,5 +1,5 @@
 import { makeGETrequest } from '../../context';
-const api_key = '4ec9ea9cd6c54deeae8354978233f5e2';
+const api_key = ''; /** Your Api key Here*/
 
 export const geocoder = async (address, dispatch) => {
   //Physical Address Geocoding to Geometric transformations
