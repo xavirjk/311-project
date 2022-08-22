@@ -6,7 +6,6 @@ import * as utils from '../../utils';
 import '../styling/css/interface.css';
 
 export const Login = (props) => {
-  console.log(process.env.REACT_APP_OPENCAGE_API_KEY);
   const dispatch = useAuthDispatch();
 
   const { loading, pass } = useAuthState();
