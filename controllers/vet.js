@@ -77,7 +77,6 @@ exports.getPull = async (req, res, next) => {
     pool = await JobPull.createOne({ vet_id });
     pool = await pool.pupulateJobDetails();
   }
-  console.log(pool);
   let jobs = pool.job_ids;
   jobs = tranformJobs(jobs);
   return responder.withStatusCode(201).withData({ jobs }).send();

@@ -8,6 +8,7 @@ const app = express();
 
 app.use(express.static(path.join()));
 app.use('/Data', express.static(path.join(__dirname, 'Data')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 const { first, last } = middlewares;
 loadMiddlewares(app, first);

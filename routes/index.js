@@ -8,6 +8,7 @@ const clientRouter = express.Router();
 const { ensureVetIsAuth, ensureClientIsAuth } = require('../authMiddlewares');
 
 exports.auth = require('./auth');
+exports.ui = require('./ui');
 
 exports.vet = vetRouter.use(ensureVetIsAuth, vet);
 

@@ -10,11 +10,11 @@ opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = SESSION_SECRET;
 
 const local = new Strategy(opts, async (payload, done) => {
-	const { name, id, email } = await Vet.findById(payload.id);
-	const data = { name, id, email };
-	done(null, data);
+  const { name, id, email } = await Vet.findById(payload.id);
+  const data = { name, id, email };
+  done(null, data);
 });
 
-module.exports = passport => {
-	passport.use(vetAuth.local, local);
+module.exports = (passport) => {
+  passport.use(vetAuth.local, local);
 };
