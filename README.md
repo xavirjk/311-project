@@ -10,31 +10,32 @@
 
 2. install [mongoDb](https://www.mongodb.com/)
 
-3. install node_modules / dependencies as specified in the package.json at `311-project` this is done by the command
+3. install node_modules / dependencies as specified in the package.json at `311-vet-health` this is done by the command
    ### `npm install --save`
-4. At the Project root folder `311_project` after installing the modules run the command
+4. Configure environment variables in a .env file
+   1. SESSION_SECRET
+   2. MONGO_URI
+   3. PORT
+   4. SKIP_PREFLIGHT_CHECK
+   5. MONGO_TEST_URI
+   6. EMAIL
+   7. REFRESH_TOKEN
+   8. CLIENT_ID
+   9. CLIENT_SECRET
+5. At the Project root folder `311-vet-health` after installing the modules run the command
    ### `node index.js`
-5. The above command runs and starts the server at
+6. The above command runs and starts the server at
    ### `port 3100`
-
-## How to Run and start the client build, running the build does not require any additional dependencies except a server to serve the build This is achieved in the following 3 steps.
-
-1. run the command below to install client server globally
-   ### `npm install -g serve`
-2. Run the command below at the client root folder `client`
-   to start the client server.
-   ### `serve -s build`
-3. The last command shown above will serve static site on the port 5000.
-   open [http://localhost:3000](http://localhost:3000) to view in the browser
-
-   Like many of serve’s internal settings, the port can be adjusted using the -l or --listen flags:
-
-   ### `serve -s build -l 4000`
-
-   open [http://localhost:4000](http://localhost:4000) to view in the browser
+7. On your web browser navigate to [http://localhost:3100](http://localhost:3100)
+8. After creating an account to login as a vet use address [http://localhost:3100/mifugo/login/vet](http://localhost:3100/mifugo/login/vet)
+   and to login as a client use [http://localhost:3100/mifugo/login](http://localhost:3100/mifugo/login).
 
 ## How to Run and start the client in development mode
 
 1. The client has been bootstraped with
    ### `npx create-react-app`
-2. additional dependencies can be found at `client/package.json file`
+2. Configure following REACT env variables in a .env file
+   1. REACT_APP_OPENCAGE_API_KEY
+   2. REACT_APP_OPENCAGE_URI
+      For the project scenarial Open cage API was chosen but its your choice to use whatever API You wish for.
+3. additional dependencies can be found at `client/package.json file`
